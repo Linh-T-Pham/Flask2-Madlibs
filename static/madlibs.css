@@ -1,10 +1,12 @@
 p {
-    color:red
-
+    color:red;
 }
 
 
 form {
-    font-family:sans;
+    font-family: sans;
     background-color:#FAEBD7;
+    font-color: pink;
 }
+
+
