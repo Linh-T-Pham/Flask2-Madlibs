@@ -32,7 +32,7 @@ def say_hello():
 def show_madlib_form():
     """Ask user if they want to play a game."""
 
-    choice = request.args.get("choice")
+    choice = request.args.get("choice") # what route is the render compliment
     if choice == "yes":
         return render_template("game.html")
 
@@ -49,8 +49,11 @@ def show_madlib():
     firstname = request.args.get("firstname")
     noun = request.args.get("noun")
     adj = request.args.get("adj")
+    country = request.args.getlist("country")
 
-    return render_template("madlib.html",firstname=firstname,noun=noun,adj=adj)
+
+    return render_template("madlib.html",
+        firstname=firstname,noun=noun,adj=adj,country=country)
 
 
 @app.route('/goodbye')
